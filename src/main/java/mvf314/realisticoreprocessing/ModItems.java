@@ -1,12 +1,7 @@
 package mvf314.realisticoreprocessing;
 
-import mvf314.realisticoreprocessing.items.HammerItem;
-import mvf314.realisticoreprocessing.items.SlagItem;
-import mvf314.realisticoreprocessing.items.SteelIngotItem;
-import mvf314.realisticoreprocessing.items.WroughtIronIngotItem;
+import mvf314.realisticoreprocessing.items.*;
 import mvf314.realisticoreprocessing.modules.bloomery.BloomItem;
-import mvf314.realisticoreprocessing.modules.bloomery.HotSteelIngotItem;
-import mvf314.realisticoreprocessing.modules.bloomery.WroughtIronCarbonCompoundItem;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class ModItems {
@@ -24,8 +19,12 @@ public class ModItems {
 	public static WroughtIronCarbonCompoundItem WROUGHT_IRON_CARBON_COMPOUND;
 	@ObjectHolder(ROPMod.MODID + ":" + Resources.HOT_STEEL_INGOT)
 	public static HotSteelIngotItem HOT_STEEL_INGOT;
+	@ObjectHolder(ROPMod.MODID + ":" + Resources.IRON_ORE_CHUNK)
+	public static IronOreChunkItem IRON_ORE_CHUNK;
 
 	@ObjectHolder(ROPMod.MODID + ":" + Resources.HAMMER)
 	public static HammerItem HAMMER;
+	@ObjectHolder(ROPMod.MODID + ":" + Resources.CHISEL)
+	public static ChiselItem CHISEL;
 
 }

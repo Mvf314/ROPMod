@@ -1,10 +1,9 @@
 package mvf314.realisticoreprocessing.modules.bloomery;
 
 import mvf314.mvflib.tile.TickableTileEntity;
+import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.*;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
@@ -32,10 +31,10 @@ public class BellowsTile extends TickableTileEntity {
 				markDirty();
 			}
 		} else {
-			int level = state.get(BlockStateProperties.LEVEL_0_8);
+			int level = state.get(CustomBlockStateProperties.LEVEL_0_6);
 			// progress to next stage
 			if (level != 6) {
-				world.setBlockState(pos, state.with(BlockStateProperties.LEVEL_0_8, level + 1));
+				state = WorldTools.setBlockState(world, pos, state, CustomBlockStateProperties.LEVEL_0_6, level + 1);
 				counter = TICKS;
 				markDirty();
 
@@ -43,7 +42,6 @@ public class BellowsTile extends TickableTileEntity {
 				if (level == 3) {
 					Direction offset = state.get(BlockStateProperties.HORIZONTAL_FACING).rotateYCCW();
 					BlockState rightState = world.getBlockState(pos.offset(offset));
-					System.out.println("block to right = " + rightState.getBlock().toString());
 					if (rightState.getBlock() == ModBlocks.BLOOMERY) {
 						if (rightState.get(BlockStateProperties.HORIZONTAL_FACING) == state.get(BlockStateProperties.HORIZONTAL_FACING) &&
 								rightState.get(BlockStateProperties.LIT) &&
@@ -53,16 +51,15 @@ public class BellowsTile extends TickableTileEntity {
 							rightState = rightState.with(CustomBlockStateProperties.HAS_CHARCOAL, false);
 							rightState = rightState.with(CustomBlockStateProperties.HAS_IRON, false);
 							world.setBlockState(pos.offset(offset), rightState);
+
 							BlockPos itemPos = pos.offset(offset).offset(Direction.UP);
-							ItemStack is = new ItemStack(ModItems.BLOOM);
-							ItemEntity entity = new ItemEntity(world, itemPos.getX(), itemPos.getY(), itemPos.getZ(), is);
-							world.addEntity(entity);
+							WorldTools.spawnItem(world, itemPos, ModItems.BLOOM);
 						}
 					}
 				}
 
 			} else {
-				state = state.with(BlockStateProperties.LEVEL_0_8, 0);
+				state = state.with(CustomBlockStateProperties.LEVEL_0_6, 0);
 				world.setBlockState(pos, state.with(BlockStateProperties.ENABLED, false));
 				counter = TICKS;
 				markDirty();

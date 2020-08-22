@@ -4,10 +4,8 @@ import mvf314.mvflib.setup.Registry;
 import mvf314.mvflib.setup.RegistryMap;
 import mvf314.realisticoreprocessing.ModBlocks;
 import mvf314.realisticoreprocessing.ROPMod;
-import mvf314.realisticoreprocessing.items.HammerItem;
-import mvf314.realisticoreprocessing.items.SlagItem;
-import mvf314.realisticoreprocessing.items.SteelIngotItem;
-import mvf314.realisticoreprocessing.items.WroughtIronIngotItem;
+import mvf314.realisticoreprocessing.blocks.BrokenIronOreBlock;
+import mvf314.realisticoreprocessing.items.*;
 import mvf314.realisticoreprocessing.modules.bloomery.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
@@ -26,6 +24,8 @@ public class Registration {
 	@SubscribeEvent
 	public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
 
+		Registry.Blocks.register(event, new BrokenIronOreBlock());
+
 		Registry.Blocks.register(event, new BloomBlock());
 		Registry.Blocks.register(event, new BloomeryBlock());
 		Registry.Blocks.register(event, new BellowsBlock());
@@ -34,6 +34,8 @@ public class Registration {
 
 	@SubscribeEvent
 	public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
+
+		Registry.Blocks.registerItem(event, ModBlocks.BROKEN_IRON_ORE, map);
 
 		Registry.Blocks.registerItem(event, ModBlocks.BLOOM, map);
 		Registry.Blocks.registerItem(event, ModBlocks.BLOOMERY, map);
@@ -46,8 +48,10 @@ public class Registration {
 		Registry.Items.register(event, new BloomItem());
 		Registry.Items.register(event, new WroughtIronCarbonCompoundItem());
 		Registry.Items.register(event, new HotSteelIngotItem());
+		Registry.Items.register(event, new IronOreChunkItem());
 
 		Registry.Items.register(event, new HammerItem());
+		Registry.Items.register(event, new ChiselItem());
 	}
 
 	@SubscribeEvent

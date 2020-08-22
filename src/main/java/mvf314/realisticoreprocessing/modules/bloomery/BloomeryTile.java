@@ -1,6 +1,7 @@
 package mvf314.realisticoreprocessing.modules.bloomery;
 
 import mvf314.mvflib.tile.TickableTileEntity;
+import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.Config;
 import mvf314.realisticoreprocessing.ModTiles;
 import net.minecraft.block.BlockState;
@@ -26,7 +27,7 @@ public class BloomeryTile extends TickableTileEntity {
 			counter--;
 			markDirty();
 		} else {
-			world.setBlockState(pos, state.with(BlockStateProperties.LIT, false));
+			WorldTools.setBlockState(world, pos, state, BlockStateProperties.LIT, false);
 			counter = Config.BLOOMERY_PROCESSING_TIME.get();
 			markDirty();
 		}

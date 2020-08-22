@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "realisticoreprocessing:item/slag"
+    "layer0": "realisticoreprocessing:item/chisel"
   }
 }

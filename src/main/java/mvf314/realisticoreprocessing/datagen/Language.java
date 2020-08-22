@@ -17,6 +17,8 @@ public class Language extends BaseLanguageProvider {
 
 		createItemGroupTranslation(ROPMod.MODID, ROPMod.MODNAME);
 
+		createBlockTranslation(ModBlocks.BROKEN_IRON_ORE);
+
 		createBlockTranslation(ModBlocks.BLOOM);
 		createBlockTranslation(ModBlocks.BLOOMERY);
 		createBlockTranslation(ModBlocks.BELLOWS);
@@ -28,8 +30,10 @@ public class Language extends BaseLanguageProvider {
 		createItemTranslation(ModItems.BLOOM);
 		createItemTranslation(ModItems.WROUGHT_IRON_CARBON_COMPOUND);
 		createItemTranslation(ModItems.HOT_STEEL_INGOT);
+		createItemTranslation(ModItems.IRON_ORE_CHUNK);
 
 		createItemTranslation(ModItems.HAMMER);
+		createItemTranslation(ModItems.CHISEL);
 	}
 
 	@Override

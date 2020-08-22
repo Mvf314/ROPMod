@@ -18,8 +18,10 @@ public class ItemModels extends BaseModelProvider {
 	@Override
 	protected void registerModels() {
 
+		createBlockItemWithCustomModel(ModBlocks.BROKEN_IRON_ORE, "broken_iron_ore_stage0");
+
 		createBlockItemModel(ModBlocks.BLOOMERY);
-		createBlockItemModel(ModBlocks.BELLOWS);
+		createBlockItemWithCustomModel(ModBlocks.BELLOWS, "bellows_level0");
 
 		createSimpleItemModel(ModItems.WROUGHT_IRON_INGOT);
 		createSimpleItemModel(ModItems.STEEL_INGOT);
@@ -28,8 +30,10 @@ public class ItemModels extends BaseModelProvider {
 		createSimpleItemModel(ModItems.BLOOM);
 		createSimpleItemModel(ModItems.WROUGHT_IRON_CARBON_COMPOUND);
 		createSimpleItemModel(ModItems.HOT_STEEL_INGOT);
+		createSimpleItemModel(ModItems.IRON_ORE_CHUNK);
 
 		createSimpleItemModel(ModItems.HAMMER);
+		createSimpleItemModel(ModItems.CHISEL);
 	}
 
 	@Nonnull

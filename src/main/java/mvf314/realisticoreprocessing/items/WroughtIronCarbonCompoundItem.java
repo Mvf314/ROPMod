@@ -1,4 +1,4 @@
-package mvf314.realisticoreprocessing.modules.bloomery;
+package mvf314.realisticoreprocessing.items;
 
 import mvf314.mvflib.item.BaseItem;
 import mvf314.mvflib.item.ItemPropertyProvider;

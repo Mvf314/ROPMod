@@ -3,6 +3,8 @@ package mvf314.realisticoreprocessing.modules.bloomery;
 import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.DirectionalXZBlock;
 import mvf314.mvflib.block.HarvestLevel;
+import mvf314.mvflib.tools.WorldTools;
+import mvf314.realisticoreprocessing.CustomBlockStateProperties;
 import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -49,7 +51,7 @@ public class BellowsBlock extends DirectionalXZBlock {
 	@Override
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
 		super.fillStateContainer(builder);
-		builder.add(BlockStateProperties.LEVEL_0_8);
+		builder.add(CustomBlockStateProperties.LEVEL_0_6);
 		builder.add(BlockStateProperties.ENABLED);
 	}
 
@@ -66,7 +68,7 @@ public class BellowsBlock extends DirectionalXZBlock {
 	public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
 		if (player.getHeldItem(Hand.MAIN_HAND).isEmpty()) {
 			if (!state.get(BlockStateProperties.ENABLED)) {
-				worldIn.setBlockState(pos, state.with(BlockStateProperties.ENABLED, true));
+				WorldTools.setBlockState(worldIn, pos, state, BlockStateProperties.ENABLED, true);
 				return ActionResultType.SUCCESS;
 			}
 		}
@@ -89,12 +91,12 @@ public class BellowsBlock extends DirectionalXZBlock {
 	}
 
 	static {
-		LEVEL = BlockStateProperties.LEVEL_0_8;
+		LEVEL = CustomBlockStateProperties.LEVEL_0_6;
 		ENABLED = BlockStateProperties.ENABLED;
 
 		SHAPE_LEVEL0 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-		SHAPE_LEVEL1 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D);
-		SHAPE_LEVEL2 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
-		SHAPE_LEVEL3 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 10.0D, 16.0D);
+		SHAPE_LEVEL1 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D);
+		SHAPE_LEVEL2 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D);
+		SHAPE_LEVEL3 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 11.0D, 16.0D);
 	}
 }

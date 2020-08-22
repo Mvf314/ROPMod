@@ -3,30 +3,36 @@ package mvf314.realisticoreprocessing.modules.bloomery;
 import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.DirectionalXZBlock;
 import mvf314.mvflib.block.HarvestLevel;
+import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.CustomBlockStateProperties;
+import mvf314.realisticoreprocessing.ModItems;
 import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
+import java.util.Random;
 
 public class BloomeryBlock extends DirectionalXZBlock {
 
@@ -79,14 +85,14 @@ public class BloomeryBlock extends DirectionalXZBlock {
 		boolean hasIron = state.get(CustomBlockStateProperties.HAS_IRON);
 		if (stack.getItem() == Items.CHARCOAL) {
 			if (!hasCharcoal) {
-				worldIn.setBlockState(pos, state.with(CustomBlockStateProperties.HAS_CHARCOAL, true));
+				WorldTools.setBlockState(worldIn, pos, state, CustomBlockStateProperties.HAS_CHARCOAL, true);
 				stack.shrink(1);
 				player.setHeldItem(handIn, stack);
 				return ActionResultType.SUCCESS;
 			}
-		} else if (stack.getItem() == Items.IRON_ORE) {
+		} else if (stack.getItem() == ModItems.IRON_ORE_CHUNK) {
 			if (!hasIron) {
-				worldIn.setBlockState(pos, state.with(CustomBlockStateProperties.HAS_IRON, true));
+				WorldTools.setBlockState(worldIn, pos, state, CustomBlockStateProperties.HAS_IRON, true);
 				stack.shrink(1);
 				player.setHeldItem(handIn, stack);
 				return ActionResultType.SUCCESS;
@@ -101,16 +107,12 @@ public class BloomeryBlock extends DirectionalXZBlock {
 			}
 		} else if (stack.isEmpty()) {
 			if (hasCharcoal) {
-				worldIn.setBlockState(pos, state.with(CustomBlockStateProperties.HAS_CHARCOAL, false));
-				worldIn.addEntity(
-						new ItemEntity(worldIn, pos.getX(), pos.getY() + 1, pos.getZ(),
-										new ItemStack(Items.CHARCOAL)));
+				WorldTools.setBlockState(worldIn, pos, state, CustomBlockStateProperties.HAS_CHARCOAL, false);
+				WorldTools.spawnItem(worldIn, pos.offset(Direction.UP), Items.CHARCOAL);
 				return ActionResultType.SUCCESS;
 			} else if (hasIron) {
-				worldIn.setBlockState(pos, state.with(CustomBlockStateProperties.HAS_IRON, false));
-				worldIn.addEntity(
-						new ItemEntity(worldIn, pos.getX(), pos.getY() + 1, pos.getZ(),
-								new ItemStack(Items.IRON_ORE)));
+				WorldTools.setBlockState(worldIn, pos, state, CustomBlockStateProperties.HAS_IRON, false);
+				WorldTools.spawnItem(worldIn, pos.offset(Direction.UP), ModItems.IRON_ORE_CHUNK);
 				return ActionResultType.SUCCESS;
 			}
 		}
@@ -123,6 +125,30 @@ public class BloomeryBlock extends DirectionalXZBlock {
 		builder.add(CustomBlockStateProperties.HAS_CHARCOAL);
 		builder.add(CustomBlockStateProperties.HAS_IRON);
 		builder.add(BlockStateProperties.LIT);
+	}
+
+	@OnlyIn(Dist.CLIENT)
+	@Override
+	public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+		if (stateIn.get(LIT)) {
+			double x = pos.getX() + 0.5d;
+			double y = pos.getY() + 0.2d;
+			double z = pos.getZ() + 0.5d;
+
+			Direction dir = stateIn.get(BlockStateProperties.HORIZONTAL_FACING);
+			double fireX = rand.nextDouble() * 0.8d - 0.4d;
+			double fireY = rand.nextDouble() * 0.2d - 0.1d;
+			double fireZ = rand.nextDouble() * 0.8d - 0.4d;
+
+			double smokeX = rand.nextDouble() * 0.1d - 0.05d;
+			double smokeY = 0.7d;
+			double smokeZ = rand.nextDouble() * 0.1d - 0.05d;
+
+			double smokeYSpeed = rand.nextDouble() * 0.05d + 0.01d;
+
+			worldIn.addParticle(ParticleTypes.FLAME, x + fireX, y + fireY, z + fireZ, 0.0d, 0.0d, 0.0d);
+			worldIn.addParticle(ParticleTypes.SMOKE, x + smokeX, y + smokeY, z + smokeZ, 0.0d, smokeYSpeed, 0.0d);
+		}
 	}
 
 	static {

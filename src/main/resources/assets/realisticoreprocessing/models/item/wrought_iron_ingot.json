@@ -1,5 +1,5 @@
 {
-  "parent": "item/handheld",
+  "parent": "item/generated",
   "textures": {
     "layer0": "realisticoreprocessing:item/wrought_iron_ingot"
   }

@@ -2,6 +2,7 @@ package mvf314.realisticoreprocessing.modules.bloomery;
 
 import mvf314.mvflib.item.BaseItem;
 import mvf314.mvflib.item.ItemPropertyProvider;
+import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.ModBlocks;
 import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.block.BlockState;
@@ -24,7 +25,7 @@ public class BloomItem extends BaseItem {
 			BlockPos pos = context.getPos().offset(context.getFace());
 			BlockState blockState = context.getWorld().getBlockState(pos.offset(Direction.DOWN));
 			if (blockState.getMaterial().isOpaque()) {
-				context.getWorld().setBlockState(pos, ModBlocks.BLOOM.getDefaultState());
+				WorldTools.setBlock(context.getWorld(), pos, ModBlocks.BLOOM);
 			}
 			ItemStack itemStack = context.getItem();
 			itemStack.shrink(1);

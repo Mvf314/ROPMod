@@ -4,11 +4,12 @@ import mvf314.mvflib.setup.RegistryMap;
 import mvf314.realisticoreprocessing.ModItems;
 import mvf314.realisticoreprocessing.ROPMod;
 import mvf314.realisticoreprocessing.Resources;
-import mvf314.realisticoreprocessing.items.HammerItem;
-import mvf314.realisticoreprocessing.items.SlagItem;
-import mvf314.realisticoreprocessing.items.SteelIngotItem;
-import mvf314.realisticoreprocessing.items.WroughtIronIngotItem;
-import mvf314.realisticoreprocessing.modules.bloomery.*;
+import mvf314.realisticoreprocessing.blocks.BrokenIronOreBlock;
+import mvf314.realisticoreprocessing.items.*;
+import mvf314.realisticoreprocessing.modules.bloomery.BellowsBlock;
+import mvf314.realisticoreprocessing.modules.bloomery.BloomBlock;
+import mvf314.realisticoreprocessing.modules.bloomery.BloomItem;
+import mvf314.realisticoreprocessing.modules.bloomery.BloomeryBlock;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -32,6 +33,8 @@ public class ModSetup {
 
 	private void populateRegistryMap() {
 
+		registryMap.put(BrokenIronOreBlock.class.getName(),		Resources.BROKEN_IRON_ORE);
+
 		registryMap.put(BloomBlock.class.getName(),		Resources.BLOOM_BLOCK);
 		registryMap.put(BloomeryBlock.class.getName(),	Resources.BLOOMERY);
 		registryMap.put(BellowsBlock.class.getName(),	Resources.BELLOWS);
@@ -43,8 +46,10 @@ public class ModSetup {
 		registryMap.put(WroughtIronCarbonCompoundItem.class.getName(),	Resources.WROUGHT_IRON_CARBON_COMPOUND);
 		registryMap.put(BloomItem.class.getName(),						Resources.BLOOM);
 		registryMap.put(HotSteelIngotItem.class.getName(),				Resources.HOT_STEEL_INGOT);
+		registryMap.put(IronOreChunkItem.class.getName(),					Resources.IRON_ORE_CHUNK);
 
-		registryMap.put(HammerItem.class.getName(),				Resources.HAMMER);
+		registryMap.put(HammerItem.class.getName(),		Resources.HAMMER);
+		registryMap.put(ChiselItem.class.getName(),		Resources.CHISEL);
 
 		registryMap.print();
 	}

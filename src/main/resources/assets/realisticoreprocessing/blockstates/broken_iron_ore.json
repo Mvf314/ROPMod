@@ -1,0 +1,35 @@
+{
+  "variants": {
+	"facing=north,stage=0,": {
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage0"
+	},
+	"facing=south,stage=0": {
+	  "y": 180,
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage0"
+	},
+	"facing=west,stage=0": {
+	  "y": 270,
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage0"
+	},
+	"facing=east,stage=0": {
+	  "y": 90,
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage0"
+	},
+
+	"facing=north,stage=1,": {
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage1"
+	},
+	"facing=south,stage=1": {
+	  "y": 180,
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage1"
+	},
+	"facing=west,stage=1": {
+	  "y": 270,
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage1"
+	},
+	"facing=east,stage=1": {
+	  "y": 90,
+	  "model": "realisticoreprocessing:block/broken_iron_ore_stage1"
+	}
+  }
+}
