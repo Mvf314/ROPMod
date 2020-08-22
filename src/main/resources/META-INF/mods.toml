@@ -27,6 +27,6 @@ showAsResourcePack=false
 [[dependencies.realisticoreprocessing]]
 	modId="mvflib"
 	mandatory=true
-	versionRange="[0.0.4,)"
+	versionRange="[0.0.5,)"
 	ordering="NONE"
 	side="BOTH"
