@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "realisticoreprocessing:wrought_iron_ingot"
+    }
+  ],
+  "result": {
+    "item": "realisticoreprocessing:wrought_iron_carbon_compound"
+  }
+}

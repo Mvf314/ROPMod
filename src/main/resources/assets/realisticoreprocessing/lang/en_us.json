@@ -1,0 +1,13 @@
+{
+  "block.realisticoreprocessing.bellows": "Bellows",
+  "block.realisticoreprocessing.bloom_block": "Bloom Block",
+  "block.realisticoreprocessing.bloomery": "Bloomery",
+  "item.realisticoreprocessing.bloom": "Bloom",
+  "item.realisticoreprocessing.hammer": "Hammer",
+  "item.realisticoreprocessing.hot_steel_ingot": "Hot Steel Ingot",
+  "item.realisticoreprocessing.slag": "Slag",
+  "item.realisticoreprocessing.steel_ingot": "Steel Ingot",
+  "item.realisticoreprocessing.wrought_iron_carbon_compound": "Wrought Iron-Carbon Compound",
+  "item.realisticoreprocessing.wrought_iron_ingot": "Wrought Iron Ingot",
+  "itemGroup.realisticoreprocessing": "Realistic Ore Processing"
+}

@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+showAsResourcePack=false
+
+[[mods]]
+    modId="realisticoreprocessing"
+    version="0.0.1"
+    displayName="Realistic Ore Processing"
+    displayURL="minecraftforge.net"
+	authors="Mvf314"
+	description='''A mod that adds realistic ore processing to Minecraft'''
+
+[[dependencies.realisticoreprocessing]]
+    modId="forge"
+	mandatory=true
+	versionRange="[31,)"
+	ordering="NONE"
+	side="BOTH"
+
+[[dependencies.realisticoreprocessing]]
+	modId="minecraft"
+	mandatory=true
+	versionRange="[1.15.2,)"
+	ordering="NONE"
+	side="BOTH"
+
+[[dependencies.realisticoreprocessing]]
+	modId="mvflib"
+	mandatory=true
+	versionRange="[0.0.4,)"
+	ordering="NONE"
+	side="BOTH"

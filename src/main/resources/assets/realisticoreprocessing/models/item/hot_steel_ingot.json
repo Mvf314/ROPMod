@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "realisticoreprocessing:item/hot_steel_ingot"
+  }
+}

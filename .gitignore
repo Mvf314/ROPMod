@@ -1,0 +1,7 @@
+/.gradle/
+/.idea/
+/build/
+/run/
+/RealisticOreProcessing.iml
+/src/test/
+/src/generated/

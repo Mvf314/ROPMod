@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "realisticoreprocessing:wrought_iron_carbon_compound"
+    ]
+  },
+  "criteria": {
+    "hasCharcoal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:charcoal"
+          }
+        ]
+      }
+    },
+    "hasWrought": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "realisticoreprocessing:wrought_iron_ingot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "realisticoreprocessing:wrought_iron_carbon_compound"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hasCharcoal",
+      "hasWrought",
+      "has_the_recipe"
+    ]
+  ]
+}

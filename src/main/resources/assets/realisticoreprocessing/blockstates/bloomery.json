@@ -1,0 +1,83 @@
+{
+  "variants": {
+    "facing=north,has_charcoal=false,has_iron=false": {
+      "model": "realisticoreprocessing:block/bloomery"
+    },
+    "facing=south,has_charcoal=false,has_iron=false": {
+      "model": "realisticoreprocessing:block/bloomery",
+      "y": 180
+    },
+    "facing=west,has_charcoal=false,has_iron=false": {
+      "model": "realisticoreprocessing:block/bloomery",
+      "y": 270
+    },
+    "facing=east,has_charcoal=false,has_iron=false": {
+      "model": "realisticoreprocessing:block/bloomery",
+      "y": 90
+    },
+
+	"facing=north,has_charcoal=true,has_iron=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal"
+	},
+	"facing=south,has_charcoal=true,has_iron=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal",
+	  "y": 180
+	},
+	"facing=west,has_charcoal=true,has_iron=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal",
+	  "y": 270
+	},
+	"facing=east,has_charcoal=true,has_iron=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal",
+	  "y": 90
+	},
+
+	"facing=north,has_charcoal=false,has_iron=true": {
+	  "model": "realisticoreprocessing:block/bloomery_iron"
+	},
+	"facing=south,has_charcoal=false,has_iron=true": {
+	  "model": "realisticoreprocessing:block/bloomery_iron",
+	  "y": 180
+	},
+	"facing=west,has_charcoal=false,has_iron=true": {
+	  "model": "realisticoreprocessing:block/bloomery_iron",
+	  "y": 270
+	},
+	"facing=east,has_charcoal=false,has_iron=true": {
+	  "model": "realisticoreprocessing:block/bloomery_iron",
+	  "y": 90
+	},
+
+	"facing=north,has_charcoal=true,has_iron=true,lit=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal_iron"
+	},
+	"facing=south,has_charcoal=true,has_iron=true,lit=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal_iron",
+	  "y": 180
+	},
+	"facing=west,has_charcoal=true,has_iron=true,lit=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal_iron",
+	  "y": 270
+	},
+	"facing=east,has_charcoal=true,has_iron=true,lit=false": {
+	  "model": "realisticoreprocessing:block/bloomery_charcoal_iron",
+	  "y": 90
+	},
+
+	"facing=north,has_charcoal=true,has_iron=true,lit=true": {
+	  "model": "realisticoreprocessing:block/bloomery_lit"
+	},
+	"facing=south,has_charcoal=true,has_iron=true,lit=true": {
+	  "model": "realisticoreprocessing:block/bloomery_lit",
+	  "y": 180
+	},
+	"facing=west,has_charcoal=true,has_iron=true,lit=true": {
+	  "model": "realisticoreprocessing:block/bloomery_lit",
+	  "y": 270
+	},
+	"facing=east,has_charcoal=true,has_iron=true,lit=true": {
+	  "model": "realisticoreprocessing:block/bloomery_lit",
+	  "y": 90
+	}
+  }
+}
