@@ -76,33 +76,33 @@
       "y": 270
     },
     "facing=north,level=5": {
-      "model": "realisticoreprocessing:block/bellowslevel1"
+      "model": "realisticoreprocessing:block/bellows_level1"
     },
     "facing=east,level=5": {
-      "model": "realisticoreprocessing:block/bellowslevel1",
+      "model": "realisticoreprocessing:block/bellows_level1",
       "y": 90
     },
     "facing=south,level=5": {
-      "model": "realisticoreprocessing:block/bellowslevel1",
+      "model": "realisticoreprocessing:block/bellows_level1",
       "y": 180
     },
     "facing=west,level=5": {
-      "model": "realisticoreprocessing:block/bellowslevel1",
+      "model": "realisticoreprocessing:block/bellows_level1",
       "y": 270
     },
     "facing=north,level=6": {
-      "model": "realisticoreprocessing:block/bellowslevel0"
+      "model": "realisticoreprocessing:block/bellows_level0"
     },
     "facing=east,level=6": {
-      "model": "realisticoreprocessing:block/bellowslevel0",
+      "model": "realisticoreprocessing:block/bellows_level0",
       "y": 90
     },
     "facing=south,level=6": {
-      "model": "realisticoreprocessing:block/bellowslevel0",
+      "model": "realisticoreprocessing:block/bellows_level0",
       "y": 180
     },
     "facing=west,level=6": {
-      "model": "realisticoreprocessing:block/bellowslevel0",
+      "model": "realisticoreprocessing:block/bellows_level0",
       "y": 270
     }
   }

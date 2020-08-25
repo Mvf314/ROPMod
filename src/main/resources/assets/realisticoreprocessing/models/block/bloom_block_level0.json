@@ -1,19 +1,20 @@
 {
-  "textures": {
-    "all": "realisticoreprocessing:block/bloom_block_level0"
-  },
-  "elements": [
-	{
-	  "from": [0, 0, 0],
-	  "to": [16, 4, 16],
-	  "faces": {
-		"down":  { "texture": "#all"},
-		"up":    { "texture": "#all"},
-		"north": { "texture": "#all"},
-		"south": { "texture": "#all"},
-		"west":  { "texture": "#all"},
-		"east":  { "texture": "#all"}
+	"credit": "Made with Blockbench",
+	"textures": {
+		"all": "realisticoreprocessing:block/bloom_block_level0"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 4, 16],
+			"faces": {
+				"north": {"uv": [0, 7, 16, 11], "texture": "#all"},
+				"east": {"uv": [0, 7, 16, 11], "texture": "#all"},
+				"south": {"uv": [0, 7, 16, 11], "texture": "#all"},
+				"west": {"uv": [0, 7, 16, 11], "texture": "#all"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#all"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#all"}
+			}
 		}
-	}
-  ]
+	]
 }
