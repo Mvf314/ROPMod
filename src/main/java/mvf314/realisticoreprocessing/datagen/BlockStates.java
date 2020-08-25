@@ -1,6 +1,7 @@
 package mvf314.realisticoreprocessing.datagen;
 
 import mvf314.mvflib.datagen.BaseBlockStateProvider;
+import mvf314.realisticoreprocessing.ModBlocks;
 import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
@@ -15,7 +16,10 @@ public class BlockStates extends BaseBlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-
+		generateBlockState(ModBlocks.BLOOM);
+		generateBlockState(ModBlocks.BLOOMERY);
+		generateBlockState(ModBlocks.BELLOWS);
+		generateBlockState(ModBlocks.BROKEN_IRON_ORE);
 	}
 
 	@Nonnull

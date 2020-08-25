@@ -3,6 +3,7 @@ package mvf314.realisticoreprocessing.modules.bloomery;
 import mvf314.mvflib.block.BaseBlock;
 import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.HarvestLevel;
+import mvf314.mvflib.datagen.BlockStateGenerator;
 import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -58,5 +59,10 @@ public class BloomBlock extends BaseBlock {
 		SHAPE_LEVEL3 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
 	}
 
+	@Override
+	public String getBlockState(String modid) {
+		return BlockStateGenerator.generateFromStates(modid, getRegistryName().getPath(),
+				"level=0", "level=1", "level=2", "level=3");
+	}
 }
 

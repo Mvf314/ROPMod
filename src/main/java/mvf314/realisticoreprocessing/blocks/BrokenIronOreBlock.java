@@ -3,6 +3,8 @@ package mvf314.realisticoreprocessing.blocks;
 import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.DirectionalXZBlock;
 import mvf314.mvflib.block.HarvestLevel;
+import mvf314.mvflib.datagen.BlockStateGenerator;
+import mvf314.mvflib.datagen.ItemModelGenerator;
 import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -36,5 +38,18 @@ public class BrokenIronOreBlock extends DirectionalXZBlock {
 
 	static {
 		STAGE = BlockStateProperties.STAGE_0_1;
+	}
+
+	@Override
+	public String getItemModel(String modid) {
+		return ItemModelGenerator.getBlock(modid, getRegistryName().getPath() + "_stage0");
+	}
+
+	@Override
+	public String getBlockState(String modid) {
+		return BlockStateGenerator.generateFromStates(
+				BlockStateGenerator.generateDirectionalXZSingleState("stage=0", modid, getRegistryName().getPath()),
+				BlockStateGenerator.generateDirectionalXZSingleState("stage=1", modid, getRegistryName().getPath())
+		);
 	}
 }

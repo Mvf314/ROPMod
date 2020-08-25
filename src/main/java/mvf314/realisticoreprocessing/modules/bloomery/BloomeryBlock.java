@@ -3,6 +3,7 @@ package mvf314.realisticoreprocessing.modules.bloomery;
 import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.DirectionalXZBlock;
 import mvf314.mvflib.block.HarvestLevel;
+import mvf314.mvflib.datagen.BlockStateGenerator;
 import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.CustomBlockStateProperties;
 import mvf314.realisticoreprocessing.ModItems;
@@ -157,4 +158,13 @@ public class BloomeryBlock extends DirectionalXZBlock {
 		LIT = BlockStateProperties.LIT;
 	}
 
+	@Override
+	public String getBlockState(String modid) {
+		return BlockStateGenerator.generateFromStates(
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("has_charcoal=false,has_iron=false", modid, getRegistryName().getPath(), ""),
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("has_charcoal=true,has_iron=false", modid, getRegistryName().getPath(), "_charcoal"),
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("has_charcoal=false,has_iron=true", modid, getRegistryName().getPath(), "_iron"),
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("has_charcoal=true,has_iron=true", modid, getRegistryName().getPath(), "_charcoal_iron")
+		);
+	}
 }

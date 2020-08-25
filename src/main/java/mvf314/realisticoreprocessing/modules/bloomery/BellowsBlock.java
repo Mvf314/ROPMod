@@ -3,6 +3,7 @@ package mvf314.realisticoreprocessing.modules.bloomery;
 import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.DirectionalXZBlock;
 import mvf314.mvflib.block.HarvestLevel;
+import mvf314.mvflib.datagen.BlockStateGenerator;
 import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.CustomBlockStateProperties;
 import mvf314.realisticoreprocessing.ROPMod;
@@ -98,5 +99,18 @@ public class BellowsBlock extends DirectionalXZBlock {
 		SHAPE_LEVEL1 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 15.0D, 16.0D);
 		SHAPE_LEVEL2 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D);
 		SHAPE_LEVEL3 = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 11.0D, 16.0D);
+	}
+
+	@Override
+	public String getBlockState(String modid) {
+		return BlockStateGenerator.generateFromStates(
+				BlockStateGenerator.generateDirectionalXZSingleState("level=0", modid, getRegistryName().getPath()),
+				BlockStateGenerator.generateDirectionalXZSingleState("level=1", modid, getRegistryName().getPath()),
+				BlockStateGenerator.generateDirectionalXZSingleState("level=2", modid, getRegistryName().getPath()),
+				BlockStateGenerator.generateDirectionalXZSingleState("level=3", modid, getRegistryName().getPath()),
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("level=4", modid, getRegistryName().getPath(), "_level2"),
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("level=5", modid, getRegistryName().getPath(), "_level1"),
+				BlockStateGenerator.getDirectionalXZSingleStateCustom("level=6", modid, getRegistryName().getPath(), "_level0")
+		);
 	}
 }

@@ -18,22 +18,22 @@ public class ItemModels extends BaseModelProvider {
 	@Override
 	protected void registerModels() {
 
-		createBlockItemWithCustomModel(ModBlocks.BROKEN_IRON_ORE, "broken_iron_ore_stage0");
+		generateItemModel(ModBlocks.BROKEN_IRON_ORE);
 
-		createBlockItemModel(ModBlocks.BLOOMERY);
-		createBlockItemWithCustomModel(ModBlocks.BELLOWS, "bellows_level0");
+		generateItemModel(ModBlocks.BLOOMERY);
+		generateItemModel(ModBlocks.BELLOWS);
 
-		createSimpleItemModel(ModItems.WROUGHT_IRON_INGOT);
-		createSimpleItemModel(ModItems.STEEL_INGOT);
-		createSimpleItemModel(ModItems.SLAG);
+		generateItemModel(ModItems.WROUGHT_IRON_INGOT);
+		generateItemModel(ModItems.STEEL_INGOT);
+		generateItemModel(ModItems.SLAG);
 
-		createSimpleItemModel(ModItems.BLOOM);
-		createSimpleItemModel(ModItems.WROUGHT_IRON_CARBON_COMPOUND);
-		createSimpleItemModel(ModItems.HOT_STEEL_INGOT);
-		createSimpleItemModel(ModItems.IRON_ORE_CHUNK);
+		generateItemModel(ModItems.BLOOM);
+		generateItemModel(ModItems.WROUGHT_IRON_CARBON_COMPOUND);
+		generateItemModel(ModItems.HOT_STEEL_INGOT);
+		generateItemModel(ModItems.IRON_ORE_CHUNK);
 
-		createSimpleItemModel(ModItems.HAMMER);
-		createSimpleItemModel(ModItems.CHISEL);
+		generateItemModel(ModItems.HAMMER);
+		generateItemModel(ModItems.CHISEL);
 	}
 
 	@Nonnull

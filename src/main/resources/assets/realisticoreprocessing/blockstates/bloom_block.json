@@ -3,14 +3,14 @@
     "level=0": {
       "model": "realisticoreprocessing:block/bloom_block_level0"
     },
-	"level=1": {
-	  "model": "realisticoreprocessing:block/bloom_block_level1"
-	},
-	"level=2": {
-	  "model": "realisticoreprocessing:block/bloom_block_level2"
-	},
-	"level=3": {
-	  "model": "realisticoreprocessing:block/bloom_block_level3"
-	}
+    "level=1": {
+      "model": "realisticoreprocessing:block/bloom_block_level1"
+    },
+    "level=2": {
+      "model": "realisticoreprocessing:block/bloom_block_level2"
+    },
+    "level=3": {
+      "model": "realisticoreprocessing:block/bloom_block_level3"
+    }
   }
 }
