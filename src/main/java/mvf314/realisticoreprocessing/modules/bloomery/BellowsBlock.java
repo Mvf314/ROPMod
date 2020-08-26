@@ -4,6 +4,7 @@ import mvf314.mvflib.block.BlockPropertyProvider;
 import mvf314.mvflib.block.DirectionalXZBlock;
 import mvf314.mvflib.block.HarvestLevel;
 import mvf314.mvflib.datagen.BlockStateGenerator;
+import mvf314.mvflib.datagen.ItemModelGenerator;
 import mvf314.mvflib.tools.WorldTools;
 import mvf314.realisticoreprocessing.CustomBlockStateProperties;
 import mvf314.realisticoreprocessing.ROPMod;
@@ -112,5 +113,10 @@ public class BellowsBlock extends DirectionalXZBlock {
 				BlockStateGenerator.getDirectionalXZSingleStateCustom("level=5", modid, getRegistryName().getPath(), "_level1"),
 				BlockStateGenerator.getDirectionalXZSingleStateCustom("level=6", modid, getRegistryName().getPath(), "_level0")
 		);
+	}
+
+	@Override
+	public String getItemModel(String modid) {
+		return ItemModelGenerator.getBlock(modid, "bellows_level0");
 	}
 }

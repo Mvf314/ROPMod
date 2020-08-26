@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "broken_iron_ore",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "realisticoreprocessing:iron_ore_chunk"
+        }
+      ]
+    }
+  ]
+}

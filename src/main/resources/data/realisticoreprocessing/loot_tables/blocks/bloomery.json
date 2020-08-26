@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "bloomery",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "realisticoreprocessing:bloomery"
+        }
+      ]
+    },
+    {
+      "name": "bloomery_charcoal",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "realisticoreprocessing:bloomery",
+              "properties": {
+                "has_charcoal": "true"
+              }
+            }
+          ],
+          "name": "minecraft:charcoal"
+        }
+      ]
+    },
+    {
+      "name": "bloomery_iron",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "realisticoreprocessing:bloomery",
+              "properties": {
+                "has_iron": "true"
+              }
+            }
+          ],
+          "name": "realisticoreprocessing:iron_ore_chunk"
+        }
+      ]
+    }
+  ]
+}

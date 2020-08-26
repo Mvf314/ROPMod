@@ -10,6 +10,7 @@ import mvf314.realisticoreprocessing.modules.bloomery.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.event.RegistryEvent;
@@ -37,7 +38,7 @@ public class Registration {
 
 		Registry.Blocks.registerItem(event, ModBlocks.BROKEN_IRON_ORE, map);
 
-		Registry.Blocks.registerItem(event, ModBlocks.BLOOM, map);
+		event.getRegistry().register(new BlockItem(ModBlocks.BLOOM, new Item.Properties()).setRegistryName(ModBlocks.BLOOM.getRegistryName()));
 		Registry.Blocks.registerItem(event, ModBlocks.BLOOMERY, map);
 		Registry.Blocks.registerItem(event, ModBlocks.BELLOWS, map);
 
