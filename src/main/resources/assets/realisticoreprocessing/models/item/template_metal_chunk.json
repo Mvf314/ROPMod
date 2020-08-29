@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "realisticoreprocessing:item/metal_chunk"
+  }
+}

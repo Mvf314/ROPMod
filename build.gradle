@@ -21,6 +21,9 @@ repositories {
         name 'tterag maven'
         url "http://maven.tterag.org/"
     }
+    flatDir {
+    	dirs 'lib'
+    }
 }
 
 version = '0.0.1'
@@ -127,6 +130,8 @@ dependencies {
     /*compile fg.deobf(project.dependencies.create("mcjty.theoneprobe:TheOneProbe-${top_version}") {
         transitive = false
     })*/
+
+    implementation name: 'JsonTools'
 
 }
 

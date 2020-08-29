@@ -17,19 +17,20 @@ public class Language extends BaseLanguageProvider {
 
 		createItemGroupTranslation(ROPMod.MODID, ROPMod.MODNAME);
 
+		createItemTranslation(ModItems.WROUGHT_IRON_CHUNK);
+		createItemTranslation(ModItems.STEEL_CHUNK);
+		createItemTranslation(ModItems.HOT_STEEL_CHUNK);
+
 		createBlockTranslation(ModBlocks.BROKEN_IRON_ORE);
 
 		createBlockTranslation(ModBlocks.BLOOM);
 		createBlockTranslation(ModBlocks.BLOOMERY);
 		createBlockTranslation(ModBlocks.BELLOWS);
 
-		createItemTranslation(ModItems.WROUGHT_IRON_INGOT);
-		createItemTranslation(ModItems.STEEL_INGOT);
 		createItemTranslation(ModItems.SLAG);
 
 		createItemTranslation(ModItems.BLOOM);
 		createItemTranslation(ModItems.WROUGHT_IRON_CARBON_COMPOUND);
-		createItemTranslation(ModItems.HOT_STEEL_INGOT);
 		createItemTranslation(ModItems.IRON_ORE_CHUNK);
 
 		createItemTranslation(ModItems.HAMMER);

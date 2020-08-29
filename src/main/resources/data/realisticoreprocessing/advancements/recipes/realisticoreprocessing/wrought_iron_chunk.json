@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "realisticoreprocessing:wrought_iron_carbon_compound"
+      "realisticoreprocessing:wrought_iron_chunk"
     ]
   },
   "criteria": {
@@ -29,7 +29,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "realisticoreprocessing:wrought_iron_carbon_compound"
+        "recipe": "realisticoreprocessing:wrought_iron_chunk"
       }
     }
   },

@@ -27,7 +27,7 @@ public class WroughtIronCarbonCompoundItem extends BaseItem {
 	@Override
 	public Entity createEntity(World world, Entity entity, ItemStack itemstack) {
 		return new HeatableItemEntity(world, entity.getPositionVec(), itemstack,
-				entity.getMotion(), Config.WICC_HEATING_TIME.get(), ModItems.HOT_STEEL_INGOT);
+				entity.getMotion(), Config.WICC_HEATING_TIME.get(), ModItems.HOT_STEEL_CHUNK);
 	}
 
 

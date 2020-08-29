@@ -18,9 +18,9 @@ public class Recipes extends BaseRecipeProvider {
 	protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
 		addShapelessRecipe(ModItems.WROUGHT_IRON_CARBON_COMPOUND)
 				.addIngredient(Items.CHARCOAL, 2)
-				.addIngredient(ModItems.WROUGHT_IRON_INGOT)
+				.addIngredient(ModItems.WROUGHT_IRON_CHUNK)
 				.addCriterion("hasCharcoal", InventoryChangeTrigger.Instance.forItems(Items.CHARCOAL))
-				.addCriterion("hasWrought", InventoryChangeTrigger.Instance.forItems(ModItems.WROUGHT_IRON_INGOT))
+				.addCriterion("hasWrought", InventoryChangeTrigger.Instance.forItems(ModItems.WROUGHT_IRON_CHUNK))
 				.build(consumer);
 	}
 

@@ -33,7 +33,7 @@ public class HammerItem extends BaseToolItem {
 				} else {
 					world.removeBlock(pos, false);
 
-					WorldTools.spawnItem(world, pos, ModItems.WROUGHT_IRON_INGOT);
+					WorldTools.spawnItem(world, pos, ModItems.WROUGHT_IRON_CHUNK);
 					WorldTools.spawnItem(world, pos, ModItems.SLAG);
 				}
 				addDamage(1, context.getPlayer());

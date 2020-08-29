@@ -6,6 +6,9 @@ import mvf314.realisticoreprocessing.ModBlocks;
 import mvf314.realisticoreprocessing.ROPMod;
 import mvf314.realisticoreprocessing.blocks.BrokenIronOreBlock;
 import mvf314.realisticoreprocessing.items.*;
+import mvf314.realisticoreprocessing.items.chunk.HotSteelChunkItem;
+import mvf314.realisticoreprocessing.items.chunk.SteelChunkItem;
+import mvf314.realisticoreprocessing.items.chunk.WroughtIronChunkItem;
 import mvf314.realisticoreprocessing.modules.bloomery.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
@@ -38,17 +41,18 @@ public class Registration {
 
 		Registry.Blocks.registerItem(event, ModBlocks.BROKEN_IRON_ORE, map);
 
+		Registry.Items.register(event, new WroughtIronChunkItem());
+		Registry.Items.register(event, new SteelChunkItem());
+		Registry.Items.register(event, new HotSteelChunkItem());
+
 		event.getRegistry().register(new BlockItem(ModBlocks.BLOOM, new Item.Properties()).setRegistryName(ModBlocks.BLOOM.getRegistryName()));
 		Registry.Blocks.registerItem(event, ModBlocks.BLOOMERY, map);
 		Registry.Blocks.registerItem(event, ModBlocks.BELLOWS, map);
 
-		Registry.Items.register(event, new WroughtIronIngotItem());
-		Registry.Items.register(event, new SteelIngotItem());
 		Registry.Items.register(event, new SlagItem());
 
 		Registry.Items.register(event, new BloomItem());
 		Registry.Items.register(event, new WroughtIronCarbonCompoundItem());
-		Registry.Items.register(event, new HotSteelIngotItem());
 		Registry.Items.register(event, new IronOreChunkItem());
 
 		Registry.Items.register(event, new HammerItem());
