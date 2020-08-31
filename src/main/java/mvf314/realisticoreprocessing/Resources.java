@@ -19,6 +19,7 @@ public class Resources {
 
 	// BLOCKS
 	public static final String BROKEN_IRON_ORE = "broken_iron_ore";
+	public static final String BROKEN_GOLD_ORE = "broken_gold_ore";
 
 	public static final String BLOOM_BLOCK = "bloom_block";
 	public static final String BLOOMERY = "bloomery";

@@ -4,6 +4,7 @@ import mvf314.mvflib.setup.Registry;
 import mvf314.mvflib.setup.RegistryMap;
 import mvf314.realisticoreprocessing.ModBlocks;
 import mvf314.realisticoreprocessing.ROPMod;
+import mvf314.realisticoreprocessing.blocks.BrokenGoldOreBlock;
 import mvf314.realisticoreprocessing.blocks.BrokenIronOreBlock;
 import mvf314.realisticoreprocessing.items.*;
 import mvf314.realisticoreprocessing.items.chunk.HotSteelChunkItem;
@@ -13,7 +14,6 @@ import mvf314.realisticoreprocessing.modules.bloomery.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.container.ContainerType;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.event.RegistryEvent;
@@ -29,6 +29,7 @@ public class Registration {
 	public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
 
 		Registry.Blocks.register(event, new BrokenIronOreBlock());
+		Registry.Blocks.register(event, new BrokenGoldOreBlock());
 
 		Registry.Blocks.register(event, new BloomBlock());
 		Registry.Blocks.register(event, new BloomeryBlock());
@@ -39,13 +40,14 @@ public class Registration {
 	@SubscribeEvent
 	public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
 
-		Registry.Blocks.registerItem(event, ModBlocks.BROKEN_IRON_ORE, map);
+		Registry.Blocks.registerItemNoTab(event, ModBlocks.BROKEN_IRON_ORE);
+		Registry.Blocks.registerItemNoTab(event, ModBlocks.BROKEN_GOLD_ORE);
 
 		Registry.Items.register(event, new WroughtIronChunkItem());
 		Registry.Items.register(event, new SteelChunkItem());
 		Registry.Items.register(event, new HotSteelChunkItem());
 
-		event.getRegistry().register(new BlockItem(ModBlocks.BLOOM, new Item.Properties()).setRegistryName(ModBlocks.BLOOM.getRegistryName()));
+		Registry.Blocks.registerItemNoTab(event, ModBlocks.BLOOM);
 		Registry.Blocks.registerItem(event, ModBlocks.BLOOMERY, map);
 		Registry.Blocks.registerItem(event, ModBlocks.BELLOWS, map);
 

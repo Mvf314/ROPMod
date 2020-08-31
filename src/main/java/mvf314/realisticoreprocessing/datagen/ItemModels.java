@@ -27,6 +27,7 @@ public class ItemModels extends BaseModelProvider {
 		generateItemModel(ModItems.HOT_STEEL_CHUNK);
 
 		generateItemModel(ModBlocks.BROKEN_IRON_ORE);
+		generateItemModel(ModBlocks.BROKEN_GOLD_ORE);
 
 		generateItemModel(ModBlocks.BLOOMERY);
 		generateItemModel(ModBlocks.BELLOWS);

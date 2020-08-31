@@ -10,6 +10,7 @@ import mvf314.realisticoreprocessing.ROPMod;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.Items;
 import net.minecraft.item.Rarity;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
@@ -46,6 +47,25 @@ public class ChiselItem extends BaseToolItem {
 				}
 
 				WorldTools.spawnItem(world, loc, ModItems.IRON_ORE_CHUNK);
+
+				addDamage(1, context.getPlayer());
+				return ActionResultType.SUCCESS;
+			} else if (blockState.getBlock() == Blocks.GOLD_ORE) {
+				BlockState state = ModBlocks.BROKEN_GOLD_ORE.getDefaultState();
+				WorldTools.setBlockState(world, pos, state, BlockStateProperties.HORIZONTAL_FACING, DirectionalXZBlock.getFacingFromEntity(pos, context.getPlayer()));
+
+				WorldTools.spawnItem(world, loc, Items.GOLD_NUGGET);
+
+				addDamage(1, context.getPlayer());
+				return ActionResultType.SUCCESS;
+			} else if (blockState.getBlock() == ModBlocks.BROKEN_GOLD_ORE) {
+				if (blockState.get(BlockStateProperties.STAGE_0_1) == 0) {
+					WorldTools.setBlockState(world, pos, blockState, BlockStateProperties.STAGE_0_1, 1);
+				} else {
+					world.removeBlock(pos, false);
+				}
+
+				WorldTools.spawnItem(world, loc, Items.GOLD_NUGGET);
 
 				addDamage(1, context.getPlayer());
 				return ActionResultType.SUCCESS;

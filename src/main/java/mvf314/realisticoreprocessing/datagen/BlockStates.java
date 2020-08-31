@@ -20,6 +20,7 @@ public class BlockStates extends BaseBlockStateProvider {
 		generateBlockState(ModBlocks.BLOOMERY);
 		generateBlockState(ModBlocks.BELLOWS);
 		generateBlockState(ModBlocks.BROKEN_IRON_ORE);
+		generateBlockState(ModBlocks.BROKEN_GOLD_ORE);
 	}
 
 	@Nonnull

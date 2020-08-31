@@ -31,6 +31,7 @@ public class LootTables extends BaseLootTableProvider {
 
 		addItemTable(ModBlocks.BLOOM, ModItems.BLOOM);
 		addItemTable(ModBlocks.BROKEN_IRON_ORE, ModItems.IRON_ORE_CHUNK);
+		addItemTable(ModBlocks.BROKEN_GOLD_ORE, Items.GOLD_NUGGET);
 
 	}
 

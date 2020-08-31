@@ -4,6 +4,7 @@ import mvf314.mvflib.setup.RegistryMap;
 import mvf314.realisticoreprocessing.ModItems;
 import mvf314.realisticoreprocessing.ROPMod;
 import mvf314.realisticoreprocessing.Resources;
+import mvf314.realisticoreprocessing.blocks.BrokenGoldOreBlock;
 import mvf314.realisticoreprocessing.blocks.BrokenIronOreBlock;
 import mvf314.realisticoreprocessing.items.*;
 import mvf314.realisticoreprocessing.items.chunk.HotSteelChunkItem;
@@ -41,6 +42,7 @@ public class ModSetup {
 		registryMap.put(HotSteelChunkItem.class.getName(), 		Resources.HOT_STEEL_CHUNK);
 
 		registryMap.put(BrokenIronOreBlock.class.getName(),		Resources.BROKEN_IRON_ORE);
+		registryMap.put(BrokenGoldOreBlock.class.getName(),		Resources.BROKEN_GOLD_ORE);
 
 		registryMap.put(BloomBlock.class.getName(),		Resources.BLOOM_BLOCK);
 		registryMap.put(BloomeryBlock.class.getName(),	Resources.BLOOMERY);

@@ -22,6 +22,7 @@ public class Language extends BaseLanguageProvider {
 		createItemTranslation(ModItems.HOT_STEEL_CHUNK);
 
 		createBlockTranslation(ModBlocks.BROKEN_IRON_ORE);
+		createBlockTranslation(ModBlocks.BROKEN_GOLD_ORE);
 
 		createBlockTranslation(ModBlocks.BLOOM);
 		createBlockTranslation(ModBlocks.BLOOMERY);
