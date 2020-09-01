@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "realisticoreprocessing:bloomery"
+    ]
+  },
+  "criteria": {
+    "brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:brick"
+          }
+        ]
+      }
+    },
+    "pipe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "realisticoreprocessing:pipe"
+          }
+        ]
+      }
+    },
+    "stoneSlab": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:stone_slab"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "realisticoreprocessing:bloomery"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "brick",
+      "pipe",
+      "stoneSlab",
+      "has_the_recipe"
+    ]
+  ]
+}

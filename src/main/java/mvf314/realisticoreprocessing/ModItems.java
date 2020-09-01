@@ -20,6 +20,9 @@ public class ModItems {
 	@ObjectHolder(ROPMod.MODID + ":" + Resources.SLAG)
 	public static SlagItem SLAG;
 
+	@ObjectHolder(ROPMod.MODID + ":" + Resources.PIPE)
+	public static PipeItem PIPE;
+
 	@ObjectHolder(ROPMod.MODID + ":" + Resources.BLOOM)
 	public static BloomItem BLOOM;
 	@ObjectHolder(ROPMod.MODID + ":" + Resources.WROUGHT_IRON_CARBON_COMPOUND)

@@ -29,6 +29,7 @@ public class Language extends BaseLanguageProvider {
 		createBlockTranslation(ModBlocks.BELLOWS);
 
 		createItemTranslation(ModItems.SLAG);
+		createItemTranslation(ModItems.PIPE);
 
 		createItemTranslation(ModItems.BLOOM);
 		createItemTranslation(ModItems.WROUGHT_IRON_CARBON_COMPOUND);

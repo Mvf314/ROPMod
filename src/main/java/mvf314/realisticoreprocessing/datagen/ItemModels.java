@@ -33,6 +33,7 @@ public class ItemModels extends BaseModelProvider {
 		generateItemModel(ModBlocks.BELLOWS);
 
 		generateItemModel(ModItems.SLAG);
+		generateItemModel(ModItems.PIPE);
 
 		generateItemModel(ModItems.BLOOM);
 		generateItemModel(ModItems.WROUGHT_IRON_CARBON_COMPOUND);

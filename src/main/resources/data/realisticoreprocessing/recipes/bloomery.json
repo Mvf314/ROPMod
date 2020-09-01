@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "realisticoreprocessing",
+  "pattern": [
+    " b ",
+    "b b",
+    "psb"
+  ],
+  "key": {
+    "b": {
+      "item": "minecraft:brick"
+    },
+    "p": {
+      "item": "realisticoreprocessing:pipe"
+    },
+    "s": {
+      "item": "minecraft:stone_slab"
+    }
+  },
+  "result": {
+    "item": "realisticoreprocessing:bloomery"
+  }
+}

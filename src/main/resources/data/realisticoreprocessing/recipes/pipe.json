@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "realisticoreprocessing",
+  "pattern": [
+    " s ",
+    "s s",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "realisticoreprocessing:pipe"
+  }
+}

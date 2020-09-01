@@ -52,6 +52,7 @@ public class Registration {
 		Registry.Blocks.registerItem(event, ModBlocks.BELLOWS, map);
 
 		Registry.Items.register(event, new SlagItem());
+		Registry.Items.register(event, new PipeItem());
 
 		Registry.Items.register(event, new BloomItem());
 		Registry.Items.register(event, new WroughtIronCarbonCompoundItem());

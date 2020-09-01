@@ -48,7 +48,8 @@ public class ModSetup {
 		registryMap.put(BloomeryBlock.class.getName(),	Resources.BLOOMERY);
 		registryMap.put(BellowsBlock.class.getName(),	Resources.BELLOWS);
 
-		registryMap.put(SlagItem.class.getName(),				Resources.SLAG);
+		registryMap.put(SlagItem.class.getName(),	Resources.SLAG);
+		registryMap.put(PipeItem.class.getName(),	Resources.PIPE);
 
 		registryMap.put(WroughtIronCarbonCompoundItem.class.getName(),	Resources.WROUGHT_IRON_CARBON_COMPOUND);
 		registryMap.put(BloomItem.class.getName(),						Resources.BLOOM);
